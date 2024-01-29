@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 50%;
+            height: 3pc;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px 1px white;
+            font: cursive;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            padding-left: 23%;
+            padding-top: 8%;
+            overflow: hidden;
+        }
+
+        fieldset {
+            width: 20%;
+            height: 100%;
+            padding: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h3 {
+            margin-top: -1pc;
+            font-family: cursive;
+            font-weight: 900;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <h3><strong><b>HELLO ! WELCOME TO MY PAGE</b></strong></h3>
+        <button onclick="time()" id="time">TIME</button>
+
+        <input type="text" name="" id="Nigeria" placeholder="GUESS NIGERIA AGE">
+    </fieldset>
+    <script>
+        let Nigeria=document.getElementById()
+
+        alert('GUESS NIGERIA AGE GAME')
+        let question = prompt('How is Nigeria');
+        switch (+ question) {
+            case 50:
+                alert('No Its Not Correct')
+                break;
+            case 51:
+                alert('You Are Wrong')
+                break;
+            case 52:
+                alert('No Its Not Correct')
+                break;
+            case 53:
+                alert('You Are Wrong')
+                break;
+            case 54:
+                alert('No Its Not Correct')
+                break;
+            case 55:
+                alert('You Are Wrong')
+                break;
+            case 56:
+                alert('No Its Not Correct')
+                break;
+            case 57:
+                alert('You Are Wrong')
+                break;
+            case 58:
+                alert('No Its Not Correct')
+                break;
+            case 59:
+                alert('You Are Wrong')
+                break;
+            case 60:
+                alert('No Its Not Correct')
+                break;
+            case 61:
+                alert('You Are Wrong')
+                break;
+            case 62:
+                alert('add more')
+                break;
+            case 63:
+                alert('You Are Correct')
+                break;
+                default:
+                      alert('Incorrect')
+                      break;
+                    }
+                    </script>
+    <script>
+        function time() {
+            let current = new Date().getHours();
+            console.log(current);
+            if (current >= 12 && current <= 6) {
+                alert("You Should Be In Bed By Now")
+            }
+            if (current >= 6 && current <= 12) {
+                alert("Good Morning")
+            }
+            if (current >= 12 && current <= 15) {
+                alert("Good Afternoon")
+            }
+            if (current >= 16 && current <= 22) {
+                alert("Good Evening")
+            }
+        }
+    </script>
+</body>
+
+</html>

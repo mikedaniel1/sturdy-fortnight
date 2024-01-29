@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            background-color: black;
+            background: url(image/orsrc59323.jpg);
+
+        }
+
+        input {
+            width: 50%;
+            height: 2pc;
+            border: 1px solid;
+            font: 2rem cursive;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            width: 10%;
+            height: 2pc;
+            background: white;
+            color: black;
+            border: none;
+            font-size: 2rem;
+        }
+
+        #symbol {
+            font-size: 3rem;
+            font-family: cursive;
+            color: white;
+        }
+
+        #answer {
+            font-size: 3rem;
+            font-family: cursive;
+            color: white;
+        }
+
+        fieldset {
+            width: 30pc;
+            height: 15pc;
+            margin-left: 25pc;
+            margin-top: 10pc;
+        }
+
+        legend {
+            color: white;
+            font-size: 2rem;
+            font-family: cursive;
+            font-variant: small-caps;
+        }
+
+        @media screen and (max-width :900px) {
+            fieldset {
+                width: 50%;
+                height: fit-content;
+                margin: 0 auto;
+                margin-top: 30%;
+            }
+
+            input {
+                width: 100%;    
+            }
+
+            button {
+                width: 20%;
+            }
+            body{
+                background: url(image/orsrc66227.jpg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Simple Calculator</legend>
+        <input type="number" id="ipt1">
+        <span id="symbol"></span>
+        <input type="number" id="ipt2"><br><br>
+        <button onclick="add()">+</button>
+        <button onclick="minius()">-</button>
+        <button onclick="mutiply()">x</button>
+        <button onclick="divide()">/</button>
+        <span id="answer"></span>
+    </fieldset>
+
+    <script>
+        function add() {
+            let a = +(document.getElementById('ipt1').value);
+            let b = +(document.getElementById('ipt2').value);
+            let c = document.getElementById('symbol')
+            let d = document.getElementById('answer')
+
+            let w = a + b;
+            d.innerHTML = "=" + w
+            c.innerHTML = "+"
+
+        }
+        function minius() {
+            let a = +(document.getElementById('ipt1').value);
+            let b = +(document.getElementById('ipt2').value);
+            let c = document.getElementById('symbol')
+            let d = document.getElementById('answer')
+
+            let w = a - b;
+            d.innerHTML = "=" + w
+            c.innerHTML = "-"
+        }
+        function divide() {
+            let a = +(document.getElementById('ipt1').value);
+            let b = +(document.getElementById('ipt2').value);
+            let c = document.getElementById('symbol')
+            let d = document.getElementById('answer')
+
+            let w = a / b;
+            d.innerHTML = "=" + w
+            c.innerHTML = "/"
+        }
+        function mutiply() {
+            let a = +(document.getElementById('ipt1').value);
+            let b = +(document.getElementById('ipt2').value);
+            let c = document.getElementById('symbol')
+            let d = document.getElementById('answer')
+
+            let w = a * b;
+            d.innerHTML = "=" + w
+            c.innerHTML = "x"
+        }
+    </script>
+</body>
+
+</html>
