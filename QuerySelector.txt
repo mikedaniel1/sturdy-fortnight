@@ -1,0 +1,2 @@
+it is used to store things inside it as plain text
+and 

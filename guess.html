@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number Game</title>
+    <style>
+        body{
+            background: black;
+        }
+        .back {
+            background-color: black;
+            padding: 20px;
+            border: 1px solid white;
+            margin-bottom: 30pc;
+        }
+        .container{
+            display: grid;
+            height: 100vh;
+            place-items: Center;
+        }
+        input{
+            background: black;
+            color: white;
+            font-size: 1.5rem;
+            font-family: monospace;
+            border: 1px solid white;
+            height: 3pc;
+            width: 100%;
+        }
+        button{
+            background: black;
+            color: white;
+            font-size: 1.5rem;
+            font-family: monospace;
+            border: 1px solid white;
+            height: 3pc;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            cursor: context-menu;
+            color: white;
+        }
+        #link{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 style="color: white; font-size: 3rem; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-variant: small-caps; text-align: center;">Guess My Number Game</h3>
+        <div class="back">
+            <p style="display: none;" id="emoji" >☠</p>
+            <input type="text" name="" id="number" placeholder="Enter Your Number"><br><br>
+            <span id="output"></span><br><br>
+            <button id="guess">Guess</button>
+            <button id="play" style="display: none; font-variant: small-caps;">Play Again</button><br><br>
+            <p style="display: none;" id="paragraph"></p>
+            <p style="color: white; font-family: monospace; font-size: 20px; ">High Score &nbsp;<span id="highscore">0</span></p>
+            <p style="color: white; font-family: monospace; font-size: 20px;">Chances &nbsp;<span id="chances">6</span></p>
+        </div>
+    </div>
+
+    <script>
+        const number = document.getElementById('number');
+        const guess = document.getElementById('guess');
+        let output = document.getElementById('output');
+        let gamebackground = document.querySelector('.back');
+        let ptag = document.getElementById('paragraph');
+        let playagainbtn = document.getElementById('play');
+        let emoji = document.getElementById('emoji');
+        let highscore = document.getElementById("highscore");
+        let chance = document.getElementById("chances");
+
+
+        let highscorevalue = 0;
+
+        let secretnumber = Math.trunc((Math.random()*30)+10);
+        let score = 30;
+        let chances = 6;
+
+        function gameover() {
+          score= score - 5
+          console.log (score);
+          chances = chances -1;
+          chance.innerHTML= chances;   
+
+            if (score == 0) {
+                gamebackground.style.backgroundColor = "red";
+                number.style.display="none";
+                guess.style.display="none";
+                output.style.fontSize="100px";
+                output.style.fontFamily="monospace";
+                output.style.fontVariant="smallCap";
+                output.innerHTML="GAME OVER";
+                output.style.color="white";
+                ptag.style.display="inline";
+                ptag.style.color="white";
+                ptag.style.fontFamily="monospace";
+                ptag.style.fontVariant="smallCap";
+                ptag.style.fontSize="20px";
+                playagainbtn.style.display="inline";
+                emoji.style.display="inline";
+                emoji.style.fontSize="100px";
+                emoji.style.marginLeft="185px";
+                emoji.style.color="white;";
+            }
+            
+        }
+
+        const game = function () {
+            if (isNaN(number.value) || number.value=="") {
+                gamebackground.style.backgroundColor="black"
+                output.innerHTML = "Input Valid Number 👿";
+                output.style.display="inline";
+                output.style.color="white";
+                output.style.fontFamily="monospace";
+                output.style.fontVariant="smallCap";
+                output.style.fontSize="20px";
+                gameover()
+            }
+            else if (number.value > secretnumber) {
+                gamebackground.style.backgroundColor=""
+                output.innerHTML = "Your Guessing Is Too High";
+                output.style.display="inline";
+                output.style.fontFamily="monospace";
+                output.style.fontVariant="smallCap";
+                output.style.fontSize="20px";
+                output.style.color="red";
+                gameover()
+
+            }
+            else if (number.value < secretnumber) {
+                gamebackground.style.backgroundColor=""
+                output.innerHTML = "Your Guessing Is Too Low";
+                output.style.display="inline";
+                output.style.fontFamily="monospace";
+                output.style.fontVariant="smallCap";
+                output.style.fontSize="20px";
+                output.style.color="yellow";
+                gameover()
+
+            }
+            else if (number.value == secretnumber) {
+                output.innerHTML = "You Are Correct 😜";
+                gamebackground.style.backgroundColor = "lime";
+                output.style.display="inline";
+                output.style.color="white";
+                output.style.fontFamily="monospace";
+                output.style.fontVariant="smallCap";
+                output.style.fontSize="20px";
+                guess.style.display="none";
+                number.style.display="none";
+                playagainbtn.style.display="inline";
+                if(score>highscorevalue){
+                    highscore.innerHTML=score;
+                }
+
+            }
+
+        }
+
+        guess.addEventListener('click', game);
+        playagainbtn.addEventListener('click',()=>{
+            number.style.display="inline";
+            guess.style.display="inline";
+            gamebackground.style.backgroundColor="black";
+            secretnumber = Math.trunc((Math.random()*30)+10);
+            playagainbtn.style.display="none";
+            ptag.style.display="none";
+            output.style.display="none";
+            emoji.style.display="none"
+            number.value="";
+            score=30;   
+            chances = 6;
+            chance.innerHTML=chances
+        })
+    </script>
+
+</body>
+
+</html>

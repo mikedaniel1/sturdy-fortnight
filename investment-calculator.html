@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invesment Calculator</title>
+    <!-- The CSS Code -->
+    <style>
+        body {
+            background: rgb(158, 248, 22);
+        }
+
+        legend {
+            font-size: 2rem;
+            font-family: monospace;
+            font-variant: small-caps;
+        }
+
+        fieldset {
+            width: 50%;
+            height: 15pc;
+            margin-left: 22pc;
+            margin-top: 10pc;
+            background: yellow;
+            border: none;
+            border-radius: 20px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            height: 2pc;
+            border: 1px solid;
+            font: 1rem monospace;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        #answer {
+            font-size: 2rem;
+            font-family: monospace;
+            color: black;
+        }
+
+        p{
+            font-size: 1.4rem;
+            font-family: monospace;
+            font-weight: bolder;
+            font-variant: small-caps;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            margin-right: 20px;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        ul{
+            display: flex;
+        }
+        a:hover{
+            color: white;
+        }
+        :visited{
+            color: red;
+        }
+        :active{
+            color: blue;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-color: yellow;
+            }
+
+            input,
+            select,
+            button {
+                width: 100%;
+                height: 2pc;
+                border: 1px solid;
+                font: 1rem monospace;
+                border-radius: 6px;
+                background-color: white;
+                color: black;
+                border: none;
+                outline: none;
+            }
+
+            #answer {
+                font-size: 2rem;
+                font-family: monospace;
+                color: black;
+            }
+
+            fieldset {
+                background: rgb(22, 241, 22);
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 30%;
+                border: none;
+                border-radius: 20px;
+                height: 17pc;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="investment-calculator.html">investment-calculator</a>
+        </li>
+        <li>
+            <a href="loan-cal.html">loan-calculator</a>
+        </li>
+        <li>
+            <a href="simple-calculator.html">simple-calculator</a>
+        </li>
+    </ul>
+    <!-- The HTML Code -->
+    <fieldset>
+        <legend>Invesment Calculator</legend>
+        <input type="number" name="" id="Amount" placeholder="Amount To Invest"><br><br>
+        <select id="duration">
+            <option value="">Duration</option>
+            <option value="1">1 Months</option>
+            <option value="2">2 Months</option>
+            <option value="3">3 Months</option>
+            <option value="4">4 Months</option>
+            <option value="5">5 Months</option>
+            <option value="6">6 Months</option>
+            <option value="7">7 Months</option>
+            <option value="8">8 Months</option>
+            <option value="9">9 Months</option>
+            <option value="10">10 Months</option>
+            <option value="11">11 Months</option>
+            <option value="12">12 Months</option>
+        </select><br>
+        <p>
+            <b>
+                <strong>
+                    OUR ROI IS 15% PER MONTH
+                </strong>
+            </b>
+        </p>
+        <button id="cal">Calculate</button>
+        <span id="answer"></span>
+    </fieldset>
+
+    <!-- The JS Code -->
+
+    <script>
+        let a = document.getElementById('Amount');
+        let b = document.getElementById('duration');
+        let c = document.getElementById('cal');
+        let d = document.getElementById('answer');
+        let rate = 0.15
+
+        c.addEventListener('click', () => {
+            let w = a.value * b.value * rate
+            d.innerHTML = w
+            alert(`You will withdraw a total amount of $${w} at the end of ${b.value}months if you invest $${a.value} with us. `)
+        })
+    </script>
+    <!-- <script>
+        function praise(){
+            let investAmount = input.value;
+            let investDuration = duration.value;
+            let roiMonth = 15% of investAmount;
+            let totalRoi = roiMonth * investDuration;
+            let totalwithdrawal = totalRoi + investAmount;
+            h3.innerHTML=`you will withdrawal ${w}
+        }
+    </script> -->
+</body>
+
+</html>

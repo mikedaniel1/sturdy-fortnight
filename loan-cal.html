@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            background: gold;
+        }
+
+        legend {
+            font-size: 2rem;
+            font-family: monospace;
+            font-variant: small-caps;
+            color: white;
+        }
+
+        fieldset {
+            width: 50%;
+            height: 15pc;
+            margin-left: 22pc;
+            margin-top: 10pc;
+            background:black;
+            border: none;
+            border-radius: 20px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            height: 2pc;
+            border: 1px solid;
+            font: 1rem monospace;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        #answer {
+            font-size: 2rem;
+            font-family: monospace;
+            color: white;
+        }
+
+        #symbol {
+            font-size: 2rem;
+            font-family: monospace;
+            color: white;
+        }
+
+        p{
+            font-size: 1.4rem;
+            font-family: monospace;
+            font-weight: bolder;
+            font-variant: small-caps;
+            color: white;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        ul{
+            display: flex;
+        }
+        a:hover{
+            color: lightgreen;
+        }
+        :visited{
+            color: red;
+        }
+        :active{
+            color: blue;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-color: black;
+            }
+
+            input,
+            select,
+            button {
+                width: 100%;
+                height: 2pc;
+                border: 1px solid;
+                font: 1rem monospace;
+                border-radius: 6px;
+                background-color: white;
+                color: black;
+                border: none;
+                outline: none;
+            }
+
+           
+            #answer {
+                font-size: 2rem;
+                font-family: monospace;
+                color: white;
+            }
+
+            #symbol {
+                font-size: 2rem;
+                font-family: monospace;
+                color: white;
+            }
+
+            fieldset {
+                background: black;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 30%;
+                border: 1px solid white;
+                border-radius: 20px;
+                height: 17pc;
+            }
+            legend{
+                color: white;
+            }
+            p{
+                color: white;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <a href="investment-calculator.html">investment-calculator</a>
+        </li>
+        <li>
+            <a href="loan-cal.html">loan-calculator</a>
+        </li>
+        <li>
+            <a href="simple-calculator.html">simple-calculator</a>
+        </li>
+    </ul>
+
+    <fieldset>
+        <legend>Loan Calculator</legend>
+        <input type="number" name="" id="Amount" placeholder="Amount To Invest"><br><br>
+        <select id="duration">
+            <option value="">Duration</option>
+            <option value="1">1 Months</option>
+            <option value="2">2 Months</option>
+            <option value="3">3 Months</option>
+            <option value="4">4 Months</option>
+            <option value="5">5 Months</option>
+            <option value="6">6 Months</option>
+            <option value="7">7 Months</option>
+            <option value="8">8 Months</option>
+            <option value="9">9 Months</option>
+            <option value="10">10 Months</option>
+            <option value="11">11 Months</option>
+            <option value="12">12 Months</option>
+        </select><br>
+        <p>
+            <b>
+                <strong>
+                    OUR  IS INTEREST 20% PER MONTH
+                </strong>
+            </b>
+        </p>
+        <button id="cal">Calculate</button>
+        <span id="answer"></span>
+    </fieldset>
+
+    <!-- The JS Code -->
+
+    <script>
+        let a = document.getElementById('Amount');
+        let b = document.getElementById('duration');
+        let c = document.getElementById('cal');
+        let d = document.getElementById('answer');
+        let rate = 0.20
+
+        c.addEventListener('click', () => {
+            let w = a.value * rate / b.value
+            d.innerHTML = w
+          alert(`You will Repay a total amount of $${w} at the end of ${b.value}months if you Borrow $${a.value} with us. `)
+        })
+    </script>
+</body>
+</html>

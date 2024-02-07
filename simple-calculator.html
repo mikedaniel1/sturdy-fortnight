@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            background: gold;
+        }
+
+        legend {
+            font-size: 2rem;
+            font-family: monospace;
+            font-variant: small-caps;
+            color: white;
+        }
+
+        fieldset {
+            width: 50%;
+            height: 15pc;
+            margin-left: 22pc;
+            margin-top: 10pc;
+            background: black;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #ipt1 {
+            width: 100%;
+            height: 2pc;
+            border: 1px solid;
+            font: 1rem monospace;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        #ipt2 {
+            width: 100%;
+            height: 2pc;
+            border: 1px solid;
+            font: 1rem monospace;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        button {
+            width: 20%;
+            height: 1.5pc;
+            border: 1px solid;
+            font: 1rem monospace;
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        #answer {
+            font-size: 2rem;
+            font-family: monospace;
+            color: white;
+        }
+
+        a {
+            color: aliceblue;
+            text-decoration: none;
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        li {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        :visited {
+            color: red;
+        }
+
+        :active {
+            color: blue;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-color: yellow;
+            }
+
+
+            button {
+                width: 20%;
+                height: 2pc;
+                border: 1px solid;
+                font: 1rem monospace;
+                border-radius: 6px;
+                background-color: white;
+                color: black;
+                border: none;
+                outline: none;
+            }
+
+            #answer {
+                font-size: 2rem;
+                font-family: monospace;
+                color: black;
+            }
+
+            fieldset {
+                background: rgb(22, 241, 22);
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 30%;
+                border: none;
+                border-radius: 20px;
+                height: 17pc;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="investment-calculator.html">investment-calculator</a>
+        </li>
+        <li>
+            <a href="loan-cal.html">loan-calculator</a>
+        </li>
+        <li>
+            <a href="simple-calculator.html">simple-calculator</a>
+        </li>
+    </ul>
+    <fieldset>
+        <legend>Simple Calculator</legend>
+        <input type="number" id="ipt1">
+        <span id="symbol"></span><br>
+        <input type="number" id="ipt2"><br><br>
+        <button class="btn" value="plus">+</button>
+        <button class="btn" value="minius">-</button>
+        <button class="btn" value="mutiply">x</button>
+        <button class="btn" value="divide">/</button><br><br>
+        <button class="btn" value="percentage">%</button><br><br>
+        <span id="answer"></span>
+    </fieldset>
+
+    <script>
+        let buttons = document.querySelectorAll("btn")
+        for (let i = 0; i < buttons.length; i++) {
+            let firstinput = Number(document.getElementById("ipt1"));
+            let secondinput = Number(document.getElementById("ipt2"));
+            let answer = document.getElementById("answer");
+            buttons[i].addEventListener("click", () => {
+                if (buttons[i].value === "plus") {
+                    answer.innerHTML = firstinput + secondinput
+                }
+            })
+        }
+
+
+        // function add() {
+        //     let a = +(document.getElementById('ipt1').value);
+        //     let b = +(document.getElementById('ipt2').value);
+        //     let c = document.getElementById('symbol')
+        //     let d = document.getElementById('answer')
+
+        //     let w = a + b;
+        //     d.innerHTML = "=" + w
+        //     c.innerHTML = "+"
+
+        // }
+        // function minius() {
+        //     let a = +(document.getElementById('ipt1').value);
+        //     let b = +(document.getElementById('ipt2').value);
+        //     let c = document.getElementById('symbol')
+        //     let d = document.getElementById('answer')
+
+        //     let w = a - b;
+        //     d.innerHTML = "=" + w
+        //     c.innerHTML = "-"
+        // }
+        // function divide() {
+        //     let a = +(document.getElementById('ipt1').value);
+        //     let b = +(document.getElementById('ipt2').value);
+        //     let c = document.getElementById('symbol')
+        //     let d = document.getElementById('answer')
+
+        //     let w = a / b;
+        //     d.innerHTML = "=" + w
+        //     c.innerHTML = "/"
+        // }
+        // function mutiply() {
+        //     let a = +(document.getElementById('ipt1').value);
+        //     let b = +(document.getElementById('ipt2').value);
+        //     let c = document.getElementById('symbol')
+        //     let d = document.getElementById('answer')
+
+        //     let w = a * b;
+        //     d.innerHTML = "=" + w
+        //     c.innerHTML = "x"
+        // }
+        // function percentage() {
+        //     let a = +(document.getElementById('ipt1').value);
+        //     let b = +(document.getElementById('ipt2').value);
+        //     let c = document.getElementById('symbol')
+        //     let d = document.getElementById('answer')
+
+        //     let w = a % b;
+        //     d.innerHTML = "=" + w
+        //     c.innerHTML = "%"
+        // }
+    </script>
+</body>
+
+</html>
