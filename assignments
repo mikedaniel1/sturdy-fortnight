@@ -1,0 +1,40 @@
+1. INRODUCTION TO JAVASCRIPT
+* 
+Create on html page with external css and js page.
+*
+write a short history of js from ECMA script 1 - 6.
+
+2. DISPLAY METHODS
+*
+explain 5 ways to display js code
+
+3. VARIABLE
+*
+defferences between VAR, LET, CONST
+*
+<!-- define 10 js keyword and what they do explain with relevent example way you can define js -->
+4. JAVASCRIPT OPERATORS
+*
+differntiate between comparsion and logical OPERATORS
+5. CONTROL FLOW
+*
+greet your app visitor good morning , good afternoon and good evening . using control flow
+*
+guess nigeria age
+6. FUNCTIONS
+*
+build a simple calulator
+*
+use arrow function , anonymous function , and function declaration to build a javascript engine that can tell you the remaining years you have to retire for you cilian job (use the age 60 for nigeria).
+7. LOOP
+*
+using loop, list all prime numbers from 10 to 50
+*
+using loop, build an app that decetes whether the user type is prime number or not fro 100 t0 200
+*
+ build an investment calculator
+ *
+ compare and contrast between for loop ,while loop ,do-while loop ,do loop with a really good example
+8. LAST CLASS
+*
+do research on different methods and property in js and right good example ,use at least 5 methods of your choice for eash of the js data types : strings , number , maths , array.

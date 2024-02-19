@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          nav {
+            background-color: white;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        li {
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            background: blue;
+            margin-top: 20px;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+            color: white;
+            border-radius: 5px;
+            transition-duration: 1s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+        }
+    </style>
+</head>
+
+<body style="background: black; color: white;">
+    <nav aria-label="...." style="margin-top: 50px;">
+        <ul class="pagination pagination-lg">
+            <li class="page-item " aria-current="page">
+                <span class="page-link"><a href="slice.html" style="text-decoration: none;">New Game (This is a copied code)</a></span>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="investment-calculator.html">Investement calc</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="histroy.html">Histroy of JS</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="loan-cal.html">loan calc</a>
+            </li>
+            <li class="page-item">
+                <a href="logical.html">logical</a>
+                <!-- <a class="page-link" href="loop prime.html">all prime numbers</a> -->
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="display.html">display methods</a>
+            </li>
+            <li>
+                <a href="var let const.html">Var ,Let and Const </a>
+            </li>
+            <li>
+                <!-- <a href="loop prime.html">Loop prime</a> -->
+            </li>
+            <li>
+                <!-- <a href="simple-calculator.html">Simple calc</a> -->
+            </li>
+            <li>
+                <a href="form validation.html">Form Validation (this s a copied code)</a>
+            </li>
+            <li>
+                <a href="assignment3.html">Array</a>
+            </li>
+            <li>
+                <a href="assignment2.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+    <h2 style="text-align: center; font-size: 3rem; font-family: monospace;">
+        Array
+    </h2>
+    <p style="font-size: 2rem; font-family: monospace;">
+        &nbsp;&nbsp; Arrays are generally described as "list-like objects"; they are basically single objects that
+        contain multiple values stored in a list. Array objects can be stored in variables and dealt with in much the
+        same way as any other type of value, the difference being that we can access each value inside the list
+        individually, and do super useful and efficient things with the list. <br> Array methods are:
+    </p>
+    <ul style="font-family: monospace; font-size: 20px;">
+        <li>
+            Array join()
+        </li>
+        <br>
+        <li>
+            Array toString()
+        </li>
+        <br>
+        <li>
+            Array push()
+        </li>
+        <br>
+        <li>
+            Array pop()
+        </li>
+        <br>
+        <li>
+            Array at()
+        </li>
+    </ul>
+    <h3 style="font-family: monospace; font-size: 30px;">
+        <u> Array Join() </u>
+    </h3>
+    <p style="font-family: monospace; font-size: 25px;">
+        The join() method also joins all array elements into a string. <br><br>
+    </p>
+    <h2 style="font-family: monospace; font-size: 30px;">
+        EXAMPLE for Join
+    </h2>
+    <p style="font-size: 25px; font-family: monospace;">
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.join(" * ");
+    </p>
+    <h3 style="font-family: monospace; font-size: 30px;">
+        <u> Array toString() </u>
+    </h3>
+    <p style="font-size: 25px; font-family: monospace;">
+        The JavaScript method toString() converts an array to a string of (comma separated) array values. <br>
+        JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+    </p>
+    <h2 style="font-family: monospace; font-size: 30px;">
+        EXAMPLE For toString
+    </h2>
+    <p style="font-size: 25px; font-family: monospace;">
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.join(" * ");
+    </p>
+    <h3 style="font-family: monospace; font-size: 30px;">
+        <u> Array push() </u>
+    </h3>
+    <p style="font-size: 25px; font-family: monospace;">
+        The push() method adds a new element to an array (at the end)
+    </p>
+    <h2 style="font-family: monospace; font-size: 30px;">
+        EXAMPLE For push
+    </h2>
+    <p style="font-size: 25px; font-family: monospace;">
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Kiwi");
+    </p>
+    <h3 style="font-family: monospace; font-size: 30px;">
+        <u> Array pop </u>
+    </h3>
+    <p style="font-size: 25px; font-family: monospace;">
+        The pop() method removes the last element from an array
+    </p>
+    <h2 style="font-family: monospace; font-size: 30px;">
+        EXAMPLE For pop
+    </h2>
+    <p style="font-size: 25px; font-family: monospace;">
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.pop();
+    </p>
+    <h3 style="font-family: monospace; font-size: 30px;">
+        <u> Array at </u>
+    </h3>
+    <p style="font-size: 25px; font-family: monospace;">
+        The at() method of Array instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+    </p>
+    <h2 style="font-family: monospace; font-size: 30px;">
+        EXAMPLE For at
+    </h2>
+    <p style="font-size: 25px; font-family: monospace;">
+        const array1 = [5, 12, 8, 130, 44]; <br><br>
+
+        let index = 2; <br><br>
+        
+        console.log(`An index of ${index} returns ${array1.at(index)}`); <br><br>
+        
+        index = -2; <br><br>
+        
+        console.log(`An index of ${index} returns ${array1.at(index)}`);
+    </p>
+</body>
+
+</html>

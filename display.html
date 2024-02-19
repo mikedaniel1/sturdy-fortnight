@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Even Number</title>
+    <title>Document</title>
     <style>
           nav {
             background-color: white;
@@ -44,8 +43,8 @@
         }
     </style>
 </head>
+<body style="background: black; color: white;">
 
-<body>
     <nav aria-label="...." style="margin-top: 50px;">
         <ul class="pagination pagination-lg">
             <li class="page-item " aria-current="page">
@@ -61,7 +60,7 @@
                 <a class="page-link" href="loan-cal.html">loan calc</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="loop prime.html">all prime numbers</a>
+                <!-- <a class="page-link" href="loop prime.html">all prime numbers</a> -->
             </li>
             <li class="page-item">
                 <a class="page-link" href="display.html">display methods</a>
@@ -70,7 +69,10 @@
                 <a href="var let const.html">Var ,Let and Const </a>
             </li>
             <li>
-                <a href="loop prime.html">Loop prime</a>
+                <li>
+                    <a href="logical.html">logical</a>
+                </li>
+                <!-- <a href="loop prime.html">Loop prime</a> -->
             </li>
             <li>
                 <!-- <a href="simple-calculator.html">Simple calc</a> -->
@@ -86,26 +88,17 @@
             </li>
         </ul>
     </nav>
-    <script>
-        let numb = Number(prompt('enter any prime number from 100 to 200'));
-        let i;
-        if (numb < 100 && numb > 200 && isNaN(numb)) {
-            console.log('only input from 100 to 200 is required')
-        } else if (!numb) {
-            Console.log('the space can not be empty')
-        } else {
-            for (i = 2; i < numb; i++) {
-                if (numb % i === 0) {
-                    console.log(`incorrect, ${numb} is not a prime number`);
-                    break;
-                }
-            }
 
-            if (numb == i) {
-                console.log(`correct , ${numb} is a prime number`)
-            }
-        }
-    </script>
+    <p style="font-size: 2rem; font-family: monospace;">
+        JavaScript can "display" data in different ways:
+        <p style="font-size: 2rem; font-family: monospace; font-weight: 900; margin-top: -30px;">
+            1. Writing into an HTML element, using innerHTML.
+             
+            2. Writing into the HTML output using document.write () <br><br>
+             3. Writing into an alert box, using window.alert () <br><br>
+             4. Writing into the browser console, using console.log () <br><br>
+             5. Writing into an input, using promt()
+        </p> 
+    </p>
 </body>
-
 </html>

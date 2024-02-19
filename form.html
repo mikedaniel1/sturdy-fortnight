@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="poji" name="poji">
+    <button id="oooo" name="www" onclick="praise()">submit</button>
+    <script>
+        function praise(){
+            let s = document.poji.www.value;
+            let a = /^[A-Z]+$/;
+            if(! s.match(a)){
+                alert("only uppercase is allowed");
+                return false;
+            }
+            else{
+                alert("good");
+                return true;
+            }
+        };
+    </script>
+</body>
+</html>
